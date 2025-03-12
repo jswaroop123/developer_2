@@ -1,15 +1,15 @@
 {
   "name": "fitness-tracker",
   "version": "0.0.0",
-  "description": "fitness tracker for health ",
+  "description": "Build fitness-tracker API ",
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts"
   },
   "author": "",
-  "license": "MIT",
-  "devDependencies": {
+  "license": "ISC",
+  "dependencies": {
     "@types/node": "^22.13.10",
-    "typescript": "^5.8.2"
+    "ts-node": "^10.9.2"
   }
 }
