@@ -1,6 +1,6 @@
 type Workout = {
   type: string;
-  duration: number; // in minutes
+  duration: number; 
   caloriesBurned: number;
   date: Date;
 };
@@ -9,14 +9,14 @@ type User = {
   id: string;
   name: string;
   age: number;
-  weight: number; // in kg
-  height: number; // in cm
+  weight: number; 
+  height: number; 
   workouts: Workout[];
 };
 
 const users = new Map<string, User>();
 
-// ✅ Add user (Manual ID)
+
 export function addUser(id: string, name: string, age: number, weight: number, height: number): void {
   if (users.has(id)) {
     throw new Error(`User with ID ${id} already exists.`);
@@ -30,7 +30,7 @@ export function addUser(id: string, name: string, age: number, weight: number, h
   console.log(`User '${name}' added with ID: ${id}`);
 }
 
-// ✅ Log workout
+
 export function logWorkout(userId: string, workout: Workout): void {
   const user = users.get(userId);
   if (!user) {
@@ -45,7 +45,7 @@ export function logWorkout(userId: string, workout: Workout): void {
   console.log(`Workout logged for user ID: ${userId}`);
 }
 
-// ✅ Get all workouts of a user
+
 export function getAllWorkoutsOf(userId: string): Workout[] {
   const user = users.get(userId);
   if (!user) {
@@ -54,7 +54,7 @@ export function getAllWorkoutsOf(userId: string): Workout[] {
   return user.workouts;
 }
 
-// ✅ Get workouts by type
+
 export function getAllWorkoutsByType(userId: string, type: string): Workout[] {
   const user = users.get(userId);
   if (!user) {
@@ -70,12 +70,12 @@ export function getAllWorkoutsByType(userId: string, type: string): Workout[] {
   return filteredWorkouts;
 }
 
-// ✅ Get all users
+
 export function getUsers(): User[] {
   return Array.from(users.values());
 }
 
-// ✅ Get a user by ID
+
 export function getUser(id: string): User {
   const user = users.get(id);
   if (!user) {
@@ -84,7 +84,6 @@ export function getUser(id: string): User {
   return user;
 }
 
-// ✅ Update user details
 export function updateUser(id: string, updatedFields: Partial<Omit<User, 'id'>>): void {
   const user = users.get(id);
   if (!user) {
