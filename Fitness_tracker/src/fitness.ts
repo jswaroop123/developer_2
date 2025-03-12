@@ -84,6 +84,7 @@ export function getUser(id: string): User {
   return user;
 }
 
+// ✅ Update user details
 export function updateUser(id: string, updatedFields: Partial<Omit<User, 'id'>>): void {
   const user = users.get(id);
   if (!user) {

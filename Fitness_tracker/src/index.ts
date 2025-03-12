@@ -19,11 +19,11 @@ logWorkout("3", { type: "gym", duration: 60, caloriesBurned: 800, date: new Date
 
 console.log(getUser("1")); 
 
-console.log(getUsers()); 
-
 console.log(getAllWorkoutsOf("1")); 
 
 console.log(getAllWorkoutsByType("1", "yoga")); 
 
 updateUser("1", { weight: 64, height: 169 });
 console.log(getUser("1")); 
+
+console.log(JSON.stringify(getUsers(), null, 2));
